@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="body">
+        <li id="button">
+            {{burger_name}}
+
+            {{#unless devoured}}
+            <div class="d-grid gap-2 col-6" id="burgerCard">
+                <button class="btn btn-danger" data-id="{{id}}" data-devoured="{{devoured}}">EAT IT!</button>
+                {{/unless}}
+            </div>
+        </li>
+    </div>
+</div>

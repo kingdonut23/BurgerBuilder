@@ -1,0 +1,39 @@
+ul {
+    list-style-type: none;
+
+}
+#burgerCard {
+    float: right;
+}
+
+.card {
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.body {
+    margin: 10px;
+}
+
+.text {
+    text-align: center;
+}
+
+#formCard {
+    float: center;
+}
+
+#card-body {
+    background: green;
+}
+
+#ul {
+    display: inline-block;
+}
+
+#body {
+    background: orange;
+}
