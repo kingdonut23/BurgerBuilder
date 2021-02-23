@@ -12,7 +12,7 @@ var burgers = {
         });
     },
     updateOne: function (collumnValues, condition, cb) {
-        orm.updateOne("burgers", collumnValues, condition, function(res) {
+        orm.updateOne("burgers", collumnValues, condition, function (res) {
             cb(res);
         });
     }

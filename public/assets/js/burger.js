@@ -19,6 +19,7 @@ $(function () {
 
         var newBurger = {
             burger: $("#burger").val().trim(),
+            devoured: $("[burger_name=devoured]: checked").val().trim()
 
         };
 
@@ -30,7 +31,5 @@ $(function () {
             console.log("New Burger Created" + newBurger);
             location.reload();
         })
-
     })
-
 });

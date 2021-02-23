@@ -11,7 +11,7 @@ function qMarks(num) {
 }
 
 function objToSql(ob) {
-    var arr= [];
+    var arr = [];
 
     for (var key in ob) {
         var value = ob[key];
@@ -54,7 +54,7 @@ var orm = {
             cb(result)
         });
     },
-    updateOne: function(table, collumnValues, condition, cb){
+    updateOne: function (table, collumnValues, condition, cb) {
         var qString = "UPDATE " + table;
 
         qString += " SET ";
@@ -63,7 +63,7 @@ var orm = {
         qString += condition;
 
         console.log(qString);
-        connection.query(qString, function(error, result) {
+        connection.query(qString, function (error, result) {
             if (error) {
                 throw error;
             }
