@@ -2,7 +2,7 @@
   "name": "burgermaster",
   "version": "1.0.0",
   "description": "App to log burgers eaten",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "node server.js"
   },
