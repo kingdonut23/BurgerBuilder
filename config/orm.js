@@ -1,4 +1,3 @@
-const { query } = require("../config/connection.js");
 var connection = require("../config/connection.js");
 
 function qMarks(num) {
@@ -26,16 +25,16 @@ function objToSql(ob) {
 }
 
 var orm = {
-    selectAll: function (table, cb) {
+    selectAll: function (table, call) {
         var qString = "SELECT * FROM " + table + ";";
         connection.query(qString, function (error, result) {
             if (error) {
                 throw error;
             }
-            cb(result);
+            call(result);
         })
     },
-    insertOne: function (table, collumn, values, cb) {
+    insertOne: function (table, collumn, values, call) {
         var qString = "INSERT INTO " + table;
 
         qString += " (";
@@ -51,10 +50,10 @@ var orm = {
             if (error) {
                 throw error;
             }
-            cb(result)
+            call(result)
         });
     },
-    updateOne: function (table, collumnValues, condition, cb) {
+    updateOne: function (table, collumnValues, condition, call) {
         var qString = "UPDATE " + table;
 
         qString += " SET ";
@@ -68,7 +67,7 @@ var orm = {
                 throw error;
             }
 
-            cb(result);
+            call(result);
         });
     }
 };
