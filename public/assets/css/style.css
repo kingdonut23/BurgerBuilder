@@ -37,3 +37,11 @@ ul {
 #body {
     background: orange;
 }
+
+#burger {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: auto
+}
