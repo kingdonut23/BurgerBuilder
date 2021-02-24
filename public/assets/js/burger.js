@@ -1,5 +1,7 @@
 $(function () {
-    $(".change-devour").on("click", function (event) {
+    $(".devour").on("click", function (event) {
+        event.preventDefault();
+        console.log($(this))
         var id = $(this).data("id");
 
         var didYouDevour = {
@@ -14,12 +16,12 @@ $(function () {
         });
     });
 
-    $(".create-form").on("submit", function (event) {
+    $(".add-Sql").on("click", function (event) {
         event.preventDefault();
+        console.log(event)
 
         var newBurger = {
             burger: $("#burger").val().trim(),
-            devoured: $("[burger_name=devoured]: checked").val().trim()
 
         };
 

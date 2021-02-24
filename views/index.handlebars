@@ -11,9 +11,9 @@
       <div class="card-body" id='card-body'>
         <ul class="list-group list-group-flush col-6 gap-2" id="ul">
           {{#each burgers}}
-          {{#unless devoured}}
+          {{#if devoured}}
           {{> burgers/burger-block devoured=true}}
-          {{/unless}}
+          {{/if}}
           {{/each}}
         </ul>
       </div>
@@ -26,9 +26,9 @@
         <div class="card-body" id='card-body'>
           <ul class="list-group list-group-flush col-6 gap-2" id="ul">
             {{#each burgers}}
-            {{#if devoured}}
+            {{#unless devoured}}
             {{> burgers/burger-block devoured=false}}
-            {{/if}}
+            {{/unless}}
             {{/each}}
           </ul>
         </div>
@@ -45,16 +45,14 @@
 
       <div class="form-group">
         <label for="ca">What's it called!?</label>
-        <input type="text" id="ca" name="name">
+        <input type="text" id="burger" name="name">
       </div>
 
       <div class="form-group">
-        <label for="devoured">Did you scarf it down?!</label><br>
-        <input type="radio" name="devour" value="1" checked> Yes!<br>
-        <input type="radio" name="devour" value="0"> No! Please stop yelling at me!
+        <label for="devoured">Did you scarf it down?!</label>
       </div>
 
-      <button class="btn btn-danger" type="submit">You pig!</button>
+      <button class="add-Sql btn btn-danger" type="submit">You pig!</button>
     </form>
   </div>
 </div>

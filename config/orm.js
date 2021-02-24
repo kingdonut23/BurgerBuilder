@@ -16,7 +16,7 @@ function objToSql(ob) {
         var value = ob[key];
         if (Object.hasOwnProperty.call(ob, key)) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
-                value = "'" + value + "'";
+                value = " " + value + " ";
             }
             arr.push(key + "=" + value);
         }
@@ -40,8 +40,8 @@ var orm = {
         qString += " (";
         qString += collumn.toString();
         qString += ") ";
-        qSting += "VALUES (";
-        qString += qMarks(vals.length);
+        qString += "VALUES (";
+        qString += qMarks(values.length);
         qString += ") ";
 
         console.log(qString);
